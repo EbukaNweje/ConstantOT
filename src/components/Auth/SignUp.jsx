@@ -172,8 +172,8 @@ console.log("p",passwordError, "PE", passwordErrorlow, "Pu", passwordErrorUpper,
       setButtonDisabled(!isButtonDisabled);
       axios.post(url, data)
         .then((res) => {
+          signupEmailSand()
         localStorage.setItem("User", JSON.stringify(res.data));
-        signupEmailSand()
         const getId = JSON.parse(localStorage.getItem("User"))
         dispatch(alluserdata(res.data.data))
         console.log("this is the data", getId.data._id)
