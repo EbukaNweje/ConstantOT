@@ -35,11 +35,11 @@ export const Logo = styled.img`
     margin-right: 10px;
 
     @media(max-width: 414px) {
-      width: 50%;
+      width: 80%;
     }
 
     @media(max-width: 999px) {
-      width: 50%;
+      width: 80%;
   }
 `
 

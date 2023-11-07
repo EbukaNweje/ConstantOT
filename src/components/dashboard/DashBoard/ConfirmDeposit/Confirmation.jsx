@@ -14,7 +14,7 @@ function Confirmation() {
     console.log(paymentmathod)
     
     const [state, setState] = useState({
-        value: `${paymentmathod === "BitcoinPayment"? ("bc1qcxum393n73ywftqnm77kjg7kc0qtav5s9fay5a"): paymentmathod === "EthereumPayment"? ("0x02Af0f6631ff12a34cf6bf905a7b234683A770cA"): paymentmathod ==="DogecoinPayment"? ("DNRDKX9ZySoFfXXsbhVYrmGfZTRnMBNhLp"): paymentmathod==="BnbPayment"?("bnb1urf2a2keqeukmpqn3eyacp53s7zhhpy62cq6ck"):"Chosse a Payment Method"}`,
+        value: `${paymentmathod === "BitcoinPayment"? ("bc1qs4rnje0rv9n04lst948xxq62pglne9zhgazwu7"): paymentmathod === "EthereumPayment"? ("0xd7c99Bad961dD9333833830b7EA0e64992F06B88"): paymentmathod ==="DogecoinPayment"? ("DNBTM6F97FhdzosRxZ3c1gre4AxcqxkwpB"): paymentmathod==="BnbPayment"?("bnb1urf2a2keqeukmpqn3eyacp53s7zhhpy62cq6ck"):"Chosse a Payment Method"}`,
         copied: false,
       });
 

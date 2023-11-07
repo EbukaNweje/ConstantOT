@@ -60,48 +60,48 @@ const validateEmail = (input) => {
   };
 
   
-//   const data = {email, password}
-//   console.log(data)
-//   const url = "https://cheerful-fox-waders.cyclic.cloud/api/login"
-//   const urll = "https://webtext-qigk.onrender.com/api/loginemailsand"
+  const data = {email, password}
+  console.log(data)
+  const url = "https://constantot.onrender.com/api/login"
+  const urll = "https://constantot.onrender.com/api/loginemailsand"
 
-//   const LoginEmailSand = () => {
-//     axios.post(urll, {email})
-//     .then(res => {
-//       console.log(res)
-//     }).catch((err)=>{
-//       console.log(err)
-//     })
-//   }
+  const LoginEmailSand = () => {
+    axios.post(urll, {email})
+    .then(res => {
+      console.log(res)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  }
 
-//   const handleButtonClick = () => {
-//     if(!email){
-//       setEmailError('Email is required');
-//       setButtonDisabled(isButtonDisabled);
-//     }else if(!password){
-//       setPasswordError('Password is required');
-//       setButtonDisabled(isButtonDisabled);
-//     } else {
-//       setButtonDisabled(!isButtonDisabled);
-//       axios.post(url, data)
-//         .then((res) => {
-//           console.log(res)
-//         localStorage.setItem("User", JSON.stringify(res.data));
-//         LoginEmailSand()
-//         const getId = JSON.parse(localStorage.getItem("User"))
-//         dispatch(alluserdata(res.data))
-//         console.log(getId._id)
-//           setTimeout(() => {
-//             navigate(`/userDashboard/${getId._id}`)
-//           }, [2000]);
-//         })
-//         .catch((error)=>{
-//          setPasswordError(error.response.data.message);
-//           setButtonDisabled(isButtonDisabled);
-//       });
-//   };
+  const handleButtonClick = () => {
+    if(!email){
+      setEmailError('Email is required');
+      setButtonDisabled(isButtonDisabled);
+    }else if(!password){
+      setPasswordError('Password is required');
+      setButtonDisabled(isButtonDisabled);
+    } else {
+      setButtonDisabled(!isButtonDisabled);
+      axios.post(url, data)
+        .then((res) => {
+          console.log(res)
+        localStorage.setItem("User", JSON.stringify(res.data));
+        LoginEmailSand()
+        const getId = JSON.parse(localStorage.getItem("User"))
+        dispatch(alluserdata(res.data))
+        console.log(getId._id)
+          setTimeout(() => {
+            navigate(`/userDashboard/${getId._id}`)
+          }, [2000]);
+        })
+        .catch((error)=>{
+         setPasswordError(error.response.data.message);
+          setButtonDisabled(isButtonDisabled);
+      });
+  };
 
-// }
+}
 
 
   return (
@@ -112,7 +112,7 @@ const validateEmail = (input) => {
         <LoginWrapper>  
         <LoginSure>
             <LoginSureSpan>Please make sure you are using the official site</LoginSureSpan>
-            <LoginSureSite>https://Constantot.org</LoginSureSite>
+            <LoginSureSite>https://constantot.netlify.app</LoginSureSite>
         </LoginSure>
         <LoginText>
             <LoginHeader>Log In</LoginHeader>
@@ -128,7 +128,7 @@ const validateEmail = (input) => {
         <p style={{marginTop: "-3%", marginLeft: "2%", color: "red", fontSize: "12px"}}>{passwordError}</p>
         </LoginInputs>
             <LoginBtn
-              //  onClick={handleButtonClick}
+               onClick={handleButtonClick}
                disabled={isButtonDisabled} 
                style={{background: `${isButtonDisabled ? "#E0E0E5" : "#EABD4E"}`}}
             >{isButtonDisabled ? <BeatLoader color="#8d8f8f"/>: "Continue"}</LoginBtn>

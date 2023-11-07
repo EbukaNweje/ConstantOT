@@ -130,77 +130,77 @@ const handlePasswordChange = (e) => {
 console.log("p",passwordError, "PE", passwordErrorlow, "Pu", passwordErrorUpper, "Pn", passwordErrorNumber, "pS", passwordErrorSymbol)
    // Function to handle button state changes
    
-  //  const data =  {email, userName, password}  
-  //  const url = "https://cheerful-fox-waders.cyclic.cloud/api/register"
+   const data =  {email, userName, password}  
+   const url = "https://constantot.onrender.com/api/register"
 
-  //  const urll = "https://webtext-qigk.onrender.com/api/signupemailsand"
+   const urll = "https://constantot.onrender.com/api/signupemailsand"
 
-  //  const signupEmailSand = () => {
-  //    axios.post(urll, {email})
-  //    .then(res => {
-  //      console.log(res)
-  //    }).catch((err)=>{
-  //      console.log(err)
-  //    })
-  //  }
+   const signupEmailSand = () => {
+     axios.post(urll, {email})
+     .then(res => {
+       console.log(res)
+     }).catch((err)=>{
+       console.log(err)
+     })
+   }
 
-  //  const handleButtonClick = () => {
-  //   if(emailError === "Email is required"){
-  //       setError({ero: true, msg: "Email is required"})
-  //       setTimeout(() => {
-  //         setError({ero: false})
-  //       }, [3000]);
-  //   }else if(emailError === "Invalid email format"){
-  //       // console.log("Invalid email format")
-  //       setError({ero: true, msg: "Invalid email format"})
-  //       setTimeout(() => {
-  //         setError({ero: false})
-  //       }, [3000]);
-  //   }else if(!email){
-  //     setError({ero: true, msg: "Email is required"})
-  //       setTimeout(() => {
-  //         setError({ero: false})
-  //       }, [3000]);
-  //   }    
-  //     else if(!userName){
-  //     setError({ero: true, msg: "Username is required"})
-  //       setTimeout(() => {
-  //         setError({ero: false})
-  //       }, [3000]);
-  //   }    
-  //   else if (passwordError === false && passwordErrorlow === false && passwordErrorUpper  === false && passwordErrorNumber === false && passwordErrorSymbol === false) {
-  //     setButtonDisabled(!isButtonDisabled);
-  //     axios.post(url, data)
-  //       .then((res) => {
-  //       localStorage.setItem("User", JSON.stringify(res.data));
-  //       signupEmailSand()
-  //       const getId = JSON.parse(localStorage.getItem("User"))
-  //       dispatch(alluserdata(res.data.data))
-  //       console.log("this is the data", getId.data._id)
-  //         setTimeout(() => {
-  //           navigate(`/userDashboard/${getId.data._id}`)
-  //           // navigate(`/verify/${getId.data._id}`)
-  //           console.log(getId._id);
-  //         }, [2000]);
-  //       }
-  //       )
-  //       .catch((error)=>{
-  //         console.log(error);
-  //         setButtonDisabled(isButtonDisabled);
-  //         setError({ero: true, msg: error.data.message})
-  //     });
-  //     // Perform form submission logic here
-  //       // console.log('submitted to Api');
-  //       // setButtonDisabled(!isButtonDisabled);
-  //       // console.log(email, password, username)
-  //       // navigate("/userDashboard")
-  //     }else {
-  //       setError({ero: true, msg: "Form validation failed"});
-  //       setTimeout(() => {
-  //         setError({ero: false})
-  //       }, [3000]);
-  //     }
-  // };
+   const handleButtonClick = () => {
+    if(emailError === "Email is required"){
+        setError({ero: true, msg: "Email is required"})
+        setTimeout(() => {
+          setError({ero: false})
+        }, [3000]);
+    }else if(emailError === "Invalid email format"){
+        // console.log("Invalid email format")
+        setError({ero: true, msg: "Invalid email format"})
+        setTimeout(() => {
+          setError({ero: false})
+        }, [3000]);
+    }else if(!email){
+      setError({ero: true, msg: "Email is required"})
+        setTimeout(() => {
+          setError({ero: false})
+        }, [3000]);
+    }    
+      else if(!userName){
+      setError({ero: true, msg: "Username is required"})
+        setTimeout(() => {
+          setError({ero: false})
+        }, [3000]);
+    }    
+    else if (passwordError === false && passwordErrorlow === false && passwordErrorUpper  === false && passwordErrorNumber === false && passwordErrorSymbol === false) {
+      setButtonDisabled(!isButtonDisabled);
+      axios.post(url, data)
+        .then((res) => {
+        localStorage.setItem("User", JSON.stringify(res.data));
+        signupEmailSand()
+        const getId = JSON.parse(localStorage.getItem("User"))
+        dispatch(alluserdata(res.data.data))
+        console.log("this is the data", getId.data._id)
+          setTimeout(() => {
+            navigate(`/userDashboard/${getId.data._id}`)
+            // navigate(`/verify/${getId.data._id}`)
+            console.log(getId._id);
+          }, [2000]);
+        }
+        )
+        .catch((error)=>{
+          console.log(error);
+          setButtonDisabled(isButtonDisabled);
+          setError({ero: true, msg: error.data.message})
+      });
+      // Perform form submission logic here
+        // console.log('submitted to Api');
+        // setButtonDisabled(!isButtonDisabled);
+        // console.log(email, password, username)
+        // navigate("/userDashboard")
+      }else {
+        setError({ero: true, msg: "Form validation failed"});
+        setTimeout(() => {
+          setError({ero: false})
+        }, [3000]);
+      }
+  };
 
   return (
     <>

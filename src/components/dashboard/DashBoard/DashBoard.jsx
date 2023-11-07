@@ -49,7 +49,7 @@ const DashBoard = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate();
     
-    const url = `https://cheerful-fox-waders.cyclic.cloud/api/userdata/${id}`
+    const url = `https://constantot.onrender.com/api/userdata/${id}`
 
     useEffect(() =>{
         axios.get(url).then(res => setData(res.data.data))

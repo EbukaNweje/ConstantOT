@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const TradeChat = () => {
   return (
     <TradeBody>
-        <Span>Invest your Cryptocurrency with WhiteBIT</Span>
+        <Span>Invest your Cryptocurrency with Constantot</Span>
         <ChatDiv>
 
         <div className="tradingview-widget-container " data-aos="fade-up" style={{width: "100%", height: "550px"}}>

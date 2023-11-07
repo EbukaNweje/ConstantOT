@@ -17,7 +17,7 @@ import { useSelector } from "react-redux";
 
 const WelcomePage = ({myPlans, myHome}) => {
     const {id} = useParams()
-    const url = `https://cheerful-fox-waders.cyclic.cloud/api/userdata/${id}`
+    const url = `https://constantot.onrender.com/api/userdata/${id}`
     const [data, setData] = useState()
     const userdata = useSelector((state)=> state.persisitedReducer.userdata)
 
@@ -29,7 +29,7 @@ const WelcomePage = ({myPlans, myHome}) => {
       }, [])
     const [close, setClose] = useState(true)
     const [state, setState] = useState({
-        value: `https://whitebit.org/${userdata.userName}`,
+        value: `https://constantot.netlify.app`,
         copied: false,
       });
 
