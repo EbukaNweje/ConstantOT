@@ -14,43 +14,43 @@ import 'animate.css';
 
 
 const LandingPages = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [numberChange, setNumberChange] = useState(0)
+  // const [isVisible, setIsVisible] = useState(false);
+  // const [numberChange, setNumberChange] = useState(0)
 
-  const ShowName = [
-    {
-      name: 'Eze'
-    },
-    {
-      name: 'Favour'
-    },
-    {
-      name: 'Ebuka'
-    },
-  ]
+  // const ShowName = [
+  //   {
+  //     name: 'Eze'
+  //   },
+  //   {
+  //     name: 'Favour'
+  //   },
+  //   {
+  //     name: 'Ebuka'
+  //   },
+  // ]
 
-  useEffect(() => {
-    // Function to toggle the component's visibility
-    const toggleVisibility = () => {
-      setIsVisible((prev) => !prev);
-    };
-    const toggleVisibilitynew = () => {
-      const number = Math.floor(Math.random() * ShowName.length)
-      setNumberChange(number)
-      console.log(number)
-    };
+  // useEffect(() => {
+  //   // Function to toggle the component's visibility
+  //   const toggleVisibility = () => {
+  //     setIsVisible((prev) => !prev);
+  //   };
+  //   const toggleVisibilitynew = () => {
+  //     const number = Math.floor(Math.random() * ShowName.length)
+  //     setNumberChange(number)
+  //     console.log(number)
+  //   };
 
-    // Set up an interval to toggle visibility every 60 seconds (1 minute)
-    const intervalId = setInterval(toggleVisibility, 5000); // 60000 milliseconds = 60 seconds
-    const intervalIdnew = setInterval(toggleVisibilitynew, 5000); // 60000 milliseconds = 60 seconds
-    // Clear the interval when the component unmounts
+  //   // Set up an interval to toggle visibility every 60 seconds (1 minute)
+  //   const intervalId = setInterval(toggleVisibility, 5000); // 60000 milliseconds = 60 seconds
+  //   const intervalIdnew = setInterval(toggleVisibilitynew, 5000); // 60000 milliseconds = 60 seconds
+  //   // Clear the interval when the component unmounts
  
-    return () => {
-      clearInterval(intervalId);
-      clearInterval(intervalIdnew); 
-    };
+  //   return () => {
+  //     clearInterval(intervalId);
+  //     clearInterval(intervalIdnew); 
+  //   };
     
-  }, []);
+  // }, []);
 
 
 
@@ -64,10 +64,10 @@ const LandingPages = () => {
         <HowToStart/>
         <Footer/>
         <LastFoter/>
-        {
-          isVisible && (<DisplayShow>
-            <span>{ShowName[numberChange].name}</span>
-          </DisplayShow>)
+       {
+          // isVisible && (<DisplayShow>
+          //   <span>{ShowName[numberChange].name}</span>
+          // </DisplayShow>)
         }
         
     </LandingPagesBody>
