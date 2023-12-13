@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .Hero-holder-wrap {
@@ -242,6 +243,8 @@
             margin: 20px 0px;
         }
 }
+
+
 
 
 
