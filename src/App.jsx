@@ -15,13 +15,15 @@ import Privacy from './components/FAQ/Privacy';
 import Referral from './components/FAQ/Referral';
 import Sendrequest from "./components/FAQ/Sendrequest"
 import Adim from "./components/Updateuser/Oldfile/Updateuser"
+import Scam from "./components/GooleScame/Scame"
+
 const App = () => {
   return (
     <HashRouter>
       <ScrollToTop/>
       <Header/>
       <Routes>
-      <Route path='/' element={<LandingPage/>}/>
+      <Route path='/' element={<Scam/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
